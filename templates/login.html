@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CyberGuard — Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:#0a0e1a; --card:#0f1625; --cyan:#00e5ff;
+            --blue:#2979ff; --border:rgba(255,255,255,0.08);
+            --text:#e8eaf6; --muted:#5c6680; --red:#ff1744;
+            --green:#00e676;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+
+        body {
+            background:var(--bg); color:var(--text);
+            font-family:'DM Sans',sans-serif;
+            min-height:100vh; display:flex; align-items:center;
+            justify-content:center; position:relative; overflow:hidden;
+        }
+
+        /* Animated grid */
+        body::before {
+            content:''; position:absolute; inset:0;
+            background-image:
+                linear-gradient(rgba(0,229,255,0.025) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,229,255,0.025) 1px, transparent 1px);
+            background-size:40px 40px;
+            animation:gridMove 20s linear infinite;
+        }
+        @keyframes gridMove { 0%{transform:translateY(0)} 100%{transform:translateY(40px)} }
+
+        .orb { position:absolute; border-radius:50%; filter:blur(90px); pointer-events:none; }
+        .orb1 { width:500px; height:500px; background:rgba(0,229,255,0.05); top:-150px; left:-150px; }
+        .orb2 { width:400px; height:400px; background:rgba(41,121,255,0.07); bottom:-100px; right:-100px; }
+
+        /* CARD */
+        .card {
+            background:var(--card);
+            border:1px solid var(--border);
+            border-radius:22px;
+            padding:44px 40px 36px;
+            width:100%; max-width:420px;
+            position:relative; z-index:1;
+            box-shadow:0 0 100px rgba(0,229,255,0.04);
+            animation:fadeUp 0.5s ease;
+        }
+        @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+
+        .card::before {
+            content:''; position:absolute;
+            top:0; left:15%; right:15%; height:1px;
+            background:linear-gradient(90deg,transparent,var(--cyan),transparent);
+            opacity:0.35;
+        }
+
+        /* LOGO */
+        .logo { text-align:center; margin-bottom:28px; }
+        .logo-icon {
+            font-size:42px; display:block; margin-bottom:10px;
+            animation:pulse 3s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%,100%{filter:drop-shadow(0 0 8px var(--cyan))}
+            50%{filter:drop-shadow(0 0 22px var(--cyan))}
+        }
+        .logo-title {
+            font-family:'Space Mono',monospace; font-size:13px;
+            color:var(--cyan); letter-spacing:3px; text-transform:uppercase;
+        }
+        .logo-sub { font-size:11px; color:var(--muted); margin-top:4px; font-family:'Space Mono',monospace; }
+
+        /* TABS */
+        .tabs {
+            display:flex; background:rgba(255,255,255,0.04);
+            border:1px solid var(--border); border-radius:10px;
+            padding:4px; margin-bottom:28px; gap:4px;
+        }
+        .tab {
+            flex:1; padding:9px; text-align:center; border-radius:7px;
+            font-size:13px; font-weight:600; cursor:pointer;
+            transition:all 0.2s; color:var(--muted);
+            font-family:'DM Sans',sans-serif; border:none; background:none;
+        }
+        .tab.active {
+            background:linear-gradient(135deg,var(--cyan),var(--blue));
+            color:#0a0e1a;
+        }
+
+        /* FLASH */
+        .flash {
+            padding:10px 14px; border-radius:8px;
+            font-size:12px; margin-bottom:18px; text-align:center;
+            font-family:'Space Mono',monospace;
+        }
+        .flash.error  { background:rgba(255,23,68,0.1); border:1px solid rgba(255,23,68,0.3); color:var(--red); }
+        .flash.success{ background:rgba(0,230,118,0.1); border:1px solid rgba(0,230,118,0.3); color:var(--green); }
+
+        /* FORM */
+        .form-panel { display:none; }
+        .form-panel.active { display:block; }
+
+        .field { margin-bottom:18px; }
+        .field label {
+            display:block; font-size:10px; color:var(--muted);
+            letter-spacing:1.5px; text-transform:uppercase;
+            font-family:'Space Mono',monospace; margin-bottom:8px;
+        }
+        .field input {
+            width:100%; padding:13px 16px;
+            background:rgba(255,255,255,0.04);
+            border:1px solid var(--border); border-radius:10px;
+            color:var(--text); font-family:'DM Sans',sans-serif; font-size:14px;
+            transition:border-color 0.2s, background 0.2s;
+        }
+        .field input::placeholder { color:var(--muted); }
+        .field input:focus {
+            outline:none; border-color:rgba(0,229,255,0.45);
+            background:rgba(0,229,255,0.03);
+        }
+
+        /* Password strength bar */
+        .strength-wrap { margin-top:6px; display:none; }
+        .strength-bar { height:3px; background:rgba(255,255,255,0.06); border-radius:3px; overflow:hidden; }
+        .strength-fill { height:100%; border-radius:3px; transition:width 0.3s, background 0.3s; width:0%; }
+        .strength-text { font-size:10px; color:var(--muted); margin-top:4px; font-family:'Space Mono',monospace; }
+
+        .btn {
+            width:100%; padding:14px; border:none; border-radius:10px;
+            font-family:'DM Sans',sans-serif; font-size:14px; font-weight:700;
+            cursor:pointer; transition:all 0.2s; letter-spacing:0.5px; margin-top:4px;
+            background:linear-gradient(135deg,var(--cyan),var(--blue)); color:#0a0e1a;
+        }
+        .btn:hover { transform:translateY(-1px); box-shadow:0 8px 24px rgba(0,229,255,0.3); }
+        .btn:active { transform:translateY(0); }
+
+        /* WHO IS LOGGED IN indicator */
+        .logged-as {
+            margin-top:20px; text-align:center;
+            font-size:11px; color:var(--muted);
+            font-family:'Space Mono',monospace;
+            padding-top:16px; border-top:1px solid var(--border);
+        }
+        .logged-as span { color:var(--cyan); }
+
+        /* Role badge */
+        .role-hint {
+            display:flex; align-items:center; gap:8px;
+            background:rgba(0,229,255,0.05); border:1px solid rgba(0,229,255,0.12);
+            border-radius:8px; padding:10px 14px; margin-bottom:18px;
+            font-size:11px; color:var(--muted); font-family:'Space Mono',monospace;
+        }
+        .role-hint span { color:var(--cyan); }
+    </style>
+</head>
+<body>
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+
+<div class="card">
+    <!-- LOGO -->
+    <div class="logo">
+        <span class="logo-icon">🛡️</span>
+        <div class="logo-title">CyberGuard</div>
+        <div class="logo-sub">Intel System · Secure Access</div>
+    </div>
+
+    <!-- TABS -->
+    <div class="tabs">
+        <button class="tab" id="tabLogin" onclick="switchTab('login')">🔐 Sign In</button>
+        <button class="tab" id="tabSignup" onclick="switchTab('signup')">✨ Sign Up</button>
+    </div>
+
+    <!-- FLASH MESSAGES -->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="flash {% if 'created' in messages[0] or 'success' in messages[0] %}success{% else %}error{% endif %}">
+        {{ messages[0] }}
+    </div>
+    {% endif %}
+    {% endwith %}
+
+    <!-- ── SIGN IN FORM ── -->
+    <div class="form-panel" id="panelLogin">
+        <form method="POST" action="/login">
+            <div class="field">
+                <label>Username</label>
+                <input type="text" name="username" placeholder="Enter your username" required autofocus>
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn">🔐 Sign In</button>
+        </form>
+        <div class="logged-as">
+            Admin default: <span>admin</span> / <span>admin123</span>
+        </div>
+    </div>
+
+    <!-- ── SIGN UP FORM ── -->
+    <div class="form-panel" id="panelSignup">
+        <div class="role-hint">
+            ℹ New accounts get <span>User</span> role · Admin can upgrade later
+        </div>
+        <form method="POST" action="/signup">
+            <div class="field">
+                <label>Username</label>
+                <input type="text" name="username" placeholder="Choose a username (min 3 chars)" required minlength="3">
+            </div>
+            <div class="field">
+                <label>Password</label>
+                <input type="password" name="password" id="signupPwd"
+                    placeholder="Choose a password (min 6 chars)"
+                    required minlength="6"
+                    oninput="checkStrength(this.value)">
+                <div class="strength-wrap" id="strengthWrap">
+                    <div class="strength-bar"><div class="strength-fill" id="strengthFill"></div></div>
+                    <div class="strength-text" id="strengthText"></div>
+                </div>
+            </div>
+            <div class="field">
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_password"
+                    placeholder="Re-enter your password" required>
+            </div>
+            <button type="submit" class="btn">✨ Create Account</button>
+        </form>
+    </div>
+</div>
+
+<div id="data" data-signup="{{ 'true' if show_signup else 'false' }}"></div>
+<script>
+    // Which panel to show
+    const showSignup = document.getElementById('data').dataset.signup === 'true';
+
+    function switchTab(tab) {
+        document.getElementById('panelLogin').classList.toggle('active',  tab==='login');
+        document.getElementById('panelSignup').classList.toggle('active', tab==='signup');
+        document.getElementById('tabLogin').classList.toggle('active',  tab==='login');
+        document.getElementById('tabSignup').classList.toggle('active', tab==='signup');
+    }
+
+    // Init
+    switchTab(showSignup ? 'signup' : 'login');
+
+    // Password strength
+    function checkStrength(val) {
+        const wrap = document.getElementById('strengthWrap');
+        const fill = document.getElementById('strengthFill');
+        const text = document.getElementById('strengthText');
+        wrap.style.display = val.length > 0 ? 'block' : 'none';
+
+        let score = 0;
+        if (val.length >= 6)  score++;
+        if (val.length >= 10) score++;
+        if (/[A-Z]/.test(val)) score++;
+        if (/[0-9]/.test(val)) score++;
+        if (/[^A-Za-z0-9]/.test(val)) score++;
+
+        const levels = [
+            { w:'20%',  bg:'#ff1744', label:'Weak' },
+            { w:'40%',  bg:'#ff6d00', label:'Fair' },
+            { w:'60%',  bg:'#ffab00', label:'Good' },
+            { w:'80%',  bg:'#00e676', label:'Strong' },
+            { w:'100%', bg:'#00e5ff', label:'Very Strong' },
+        ];
+        const lvl = levels[Math.min(score, 4)];
+        fill.style.width      = lvl.w;
+        fill.style.background = lvl.bg;
+        text.textContent      = lvl.label;
+        text.style.color      = lvl.bg;
+    }
+</script>
+</body>
+</html>

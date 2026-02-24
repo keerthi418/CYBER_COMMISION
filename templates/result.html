@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="card">
+        <h2>🔍 Analysis Result</h2>
+
+        <div class="result-box {% if prediction == 'Threat' %}threat{% else %}safe{% endif %}">
+            <h3>Status: {{ prediction }}</h3>
+            <p>Confidence: {{ confidence }}%</p>
+            <p>Advice: {{ advice }}</p>
+        </div>
+
+        <br>
+        <a href="/">⬅ Back</a>
+    </div>
+
+</div>
+
+</body>
+</html>

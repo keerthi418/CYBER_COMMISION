@@ -1,0 +1,301 @@
+text,label
+Bank caller asked for OTP suddenly,OTP Fraud
+I shared OTP and money got deducted suddenly,OTP Fraud
+Someone requested OTP for refund today,OTP Fraud
+Scammer asked for OTP and withdrew money urgently,OTP Fraud
+Scammer asked for OTP and withdrew money yesterday,OTP Fraud
+Bank caller asked for OTP today,OTP Fraud
+Bank caller asked for OTP urgently,OTP Fraud
+I shared OTP and money got deducted yesterday,OTP Fraud
+Received fake OTP verification call suddenly,OTP Fraud
+Received fake OTP verification call urgently,OTP Fraud
+Received fake OTP verification call urgently,OTP Fraud
+Received fake OTP verification call immediately,OTP Fraud
+Bank caller asked for OTP today,OTP Fraud
+Bank caller asked for OTP suddenly,OTP Fraud
+I shared OTP and money got deducted suddenly,OTP Fraud
+Someone requested OTP for refund urgently,OTP Fraud
+Scammer asked for OTP and withdrew money urgently,OTP Fraud
+Someone requested OTP for refund today,OTP Fraud
+Received fake OTP verification call immediately,OTP Fraud
+Someone requested OTP for refund immediately,OTP Fraud
+Received fake OTP verification call yesterday,OTP Fraud
+Someone requested OTP for refund immediately,OTP Fraud
+Scammer asked for OTP and withdrew money immediately,OTP Fraud
+Bank caller asked for OTP immediately,OTP Fraud
+I shared OTP and money got deducted immediately,OTP Fraud
+Received fake OTP verification call today,OTP Fraud
+Bank caller asked for OTP today,OTP Fraud
+Received fake OTP verification call immediately,OTP Fraud
+I shared OTP and money got deducted yesterday,OTP Fraud
+Someone requested OTP for refund urgently,OTP Fraud
+Approved UPI collect request accidentally suddenly,UPI Fraud
+QR code scan resulted in money loss suddenly,UPI Fraud
+Clicked UPI link and lost money urgently,UPI Fraud
+Unknown UPI transaction occurred urgently,UPI Fraud
+QR code scan resulted in money loss urgently,UPI Fraud
+Clicked UPI link and lost money suddenly,UPI Fraud
+Approved UPI collect request accidentally urgently,UPI Fraud
+Approved UPI collect request accidentally yesterday,UPI Fraud
+Fraud UPI payment request received yesterday,UPI Fraud
+Approved UPI collect request accidentally today,UPI Fraud
+Approved UPI collect request accidentally yesterday,UPI Fraud
+Fraud UPI payment request received urgently,UPI Fraud
+QR code scan resulted in money loss urgently,UPI Fraud
+QR code scan resulted in money loss immediately,UPI Fraud
+QR code scan resulted in money loss immediately,UPI Fraud
+Unknown UPI transaction occurred suddenly,UPI Fraud
+Unknown UPI transaction occurred urgently,UPI Fraud
+Clicked UPI link and lost money suddenly,UPI Fraud
+Approved UPI collect request accidentally yesterday,UPI Fraud
+Fraud UPI payment request received today,UPI Fraud
+Approved UPI collect request accidentally urgently,UPI Fraud
+QR code scan resulted in money loss urgently,UPI Fraud
+QR code scan resulted in money loss suddenly,UPI Fraud
+Clicked UPI link and lost money suddenly,UPI Fraud
+Approved UPI collect request accidentally immediately,UPI Fraud
+Fraud UPI payment request received today,UPI Fraud
+QR code scan resulted in money loss urgently,UPI Fraud
+QR code scan resulted in money loss urgently,UPI Fraud
+QR code scan resulted in money loss immediately,UPI Fraud
+QR code scan resulted in money loss urgently,UPI Fraud
+Bank account verification email scam immediately,Phishing
+Bank account verification email scam suddenly,Phishing
+Fraud website stole my credentials suddenly,Phishing
+Received suspicious SMS with login link suddenly,Phishing
+KYC update message with unknown link yesterday,Phishing
+Fake email asking bank login details today,Phishing
+Fake email asking bank login details yesterday,Phishing
+Received suspicious SMS with login link urgently,Phishing
+Fake email asking bank login details immediately,Phishing
+Fraud website stole my credentials yesterday,Phishing
+Fake email asking bank login details yesterday,Phishing
+Fake email asking bank login details urgently,Phishing
+Received suspicious SMS with login link urgently,Phishing
+Fraud website stole my credentials immediately,Phishing
+Received suspicious SMS with login link suddenly,Phishing
+Fake email asking bank login details today,Phishing
+Fake email asking bank login details immediately,Phishing
+Fake email asking bank login details immediately,Phishing
+Fraud website stole my credentials suddenly,Phishing
+KYC update message with unknown link suddenly,Phishing
+Bank account verification email scam immediately,Phishing
+Received suspicious SMS with login link immediately,Phishing
+Fraud website stole my credentials suddenly,Phishing
+Fraud website stole my credentials today,Phishing
+Fake email asking bank login details yesterday,Phishing
+Fake email asking bank login details urgently,Phishing
+Fake email asking bank login details urgently,Phishing
+Fake email asking bank login details suddenly,Phishing
+Received suspicious SMS with login link urgently,Phishing
+Bank account verification email scam suddenly,Phishing
+Facebook account accessed by unknown person suddenly,Account Hacking
+Facebook account accessed by unknown person yesterday,Account Hacking
+Instagram account hacked urgently,Account Hacking
+Unauthorized login alert received yesterday,Account Hacking
+Instagram account hacked today,Account Hacking
+Facebook account accessed by unknown person today,Account Hacking
+Unauthorized login alert received urgently,Account Hacking
+Gmail password changed without permission yesterday,Account Hacking
+Unauthorized login alert received suddenly,Account Hacking
+Unauthorized login alert received suddenly,Account Hacking
+Unauthorized login alert received suddenly,Account Hacking
+Facebook account accessed by unknown person urgently,Account Hacking
+Lost access to my social media account immediately,Account Hacking
+Instagram account hacked yesterday,Account Hacking
+Instagram account hacked urgently,Account Hacking
+Facebook account accessed by unknown person today,Account Hacking
+Facebook account accessed by unknown person immediately,Account Hacking
+Lost access to my social media account urgently,Account Hacking
+Unauthorized login alert received yesterday,Account Hacking
+Instagram account hacked immediately,Account Hacking
+Instagram account hacked urgently,Account Hacking
+Gmail password changed without permission suddenly,Account Hacking
+Gmail password changed without permission immediately,Account Hacking
+Facebook account accessed by unknown person immediately,Account Hacking
+Unauthorized login alert received today,Account Hacking
+Unauthorized login alert received immediately,Account Hacking
+Gmail password changed without permission immediately,Account Hacking
+Facebook account accessed by unknown person immediately,Account Hacking
+Gmail password changed without permission today,Account Hacking
+Lost access to my social media account suddenly,Account Hacking
+Paid money for fake job offer immediately,Job Scam
+Paid money for fake job offer yesterday,Job Scam
+Fraud job consultancy took money yesterday,Job Scam
+Telegram job scam demanding payment immediately,Job Scam
+Fraud job consultancy took money suddenly,Job Scam
+Paid money for fake job offer immediately,Job Scam
+Paid money for fake job offer today,Job Scam
+Paid money for fake job offer today,Job Scam
+Work from home scam collected fee suddenly,Job Scam
+Fake overseas job asking visa fee immediately,Job Scam
+Paid money for fake job offer today,Job Scam
+Fraud job consultancy took money urgently,Job Scam
+Paid money for fake job offer today,Job Scam
+Paid money for fake job offer today,Job Scam
+Fake overseas job asking visa fee suddenly,Job Scam
+Paid money for fake job offer yesterday,Job Scam
+Fake overseas job asking visa fee immediately,Job Scam
+Paid money for fake job offer immediately,Job Scam
+Telegram job scam demanding payment immediately,Job Scam
+Telegram job scam demanding payment yesterday,Job Scam
+Fraud job consultancy took money urgently,Job Scam
+Work from home scam collected fee suddenly,Job Scam
+Paid money for fake job offer immediately,Job Scam
+Telegram job scam demanding payment urgently,Job Scam
+Work from home scam collected fee yesterday,Job Scam
+Work from home scam collected fee urgently,Job Scam
+Telegram job scam demanding payment suddenly,Job Scam
+Telegram job scam demanding payment immediately,Job Scam
+Work from home scam collected fee today,Job Scam
+Fraud job consultancy took money urgently,Job Scam
+Won lottery message asking processing fee urgently,Lottery Scam
+Won lottery message asking processing fee today,Lottery Scam
+Lucky draw message demanding money immediately,Lottery Scam
+WhatsApp lottery winning fraud yesterday,Lottery Scam
+Prize claim scam asking payment suddenly,Lottery Scam
+Won lottery message asking processing fee today,Lottery Scam
+Won lottery message asking processing fee urgently,Lottery Scam
+Won lottery message asking processing fee yesterday,Lottery Scam
+International lottery email scam yesterday,Lottery Scam
+Lucky draw message demanding money yesterday,Lottery Scam
+WhatsApp lottery winning fraud urgently,Lottery Scam
+WhatsApp lottery winning fraud immediately,Lottery Scam
+Prize claim scam asking payment urgently,Lottery Scam
+Lucky draw message demanding money urgently,Lottery Scam
+Prize claim scam asking payment immediately,Lottery Scam
+Prize claim scam asking payment suddenly,Lottery Scam
+Lucky draw message demanding money yesterday,Lottery Scam
+WhatsApp lottery winning fraud today,Lottery Scam
+Won lottery message asking processing fee suddenly,Lottery Scam
+International lottery email scam suddenly,Lottery Scam
+Prize claim scam asking payment urgently,Lottery Scam
+Won lottery message asking processing fee urgently,Lottery Scam
+WhatsApp lottery winning fraud today,Lottery Scam
+Won lottery message asking processing fee urgently,Lottery Scam
+Won lottery message asking processing fee urgently,Lottery Scam
+International lottery email scam suddenly,Lottery Scam
+WhatsApp lottery winning fraud suddenly,Lottery Scam
+International lottery email scam immediately,Lottery Scam
+Lucky draw message demanding money suddenly,Lottery Scam
+Won lottery message asking processing fee immediately,Lottery Scam
+Crypto investment group cheated me immediately,Investment Scam
+Crypto investment group cheated me urgently,Investment Scam
+Crypto investment group cheated me immediately,Investment Scam
+Online trading app blocked withdrawal yesterday,Investment Scam
+Ponzi scheme promised double returns immediately,Investment Scam
+Crypto investment group cheated me urgently,Investment Scam
+Fraud investment call promising high returns today,Investment Scam
+Online trading app blocked withdrawal immediately,Investment Scam
+Fake stock market advisor fraud today,Investment Scam
+Online trading app blocked withdrawal suddenly,Investment Scam
+Ponzi scheme promised double returns immediately,Investment Scam
+Ponzi scheme promised double returns suddenly,Investment Scam
+Online trading app blocked withdrawal immediately,Investment Scam
+Crypto investment group cheated me immediately,Investment Scam
+Fraud investment call promising high returns immediately,Investment Scam
+Fraud investment call promising high returns immediately,Investment Scam
+Ponzi scheme promised double returns today,Investment Scam
+Fraud investment call promising high returns today,Investment Scam
+Fraud investment call promising high returns yesterday,Investment Scam
+Crypto investment group cheated me yesterday,Investment Scam
+Ponzi scheme promised double returns urgently,Investment Scam
+Crypto investment group cheated me immediately,Investment Scam
+Fake stock market advisor fraud suddenly,Investment Scam
+Fraud investment call promising high returns today,Investment Scam
+Online trading app blocked withdrawal today,Investment Scam
+Fraud investment call promising high returns yesterday,Investment Scam
+Crypto investment group cheated me immediately,Investment Scam
+Fraud investment call promising high returns suddenly,Investment Scam
+Ponzi scheme promised double returns yesterday,Investment Scam
+Ponzi scheme promised double returns suddenly,Investment Scam
+Fake shopping website took payment today,Online Shopping Scam
+Ordered product not delivered yesterday,Online Shopping Scam
+Fake shopping website took payment immediately,Online Shopping Scam
+Ecommerce fraud site disappeared immediately,Online Shopping Scam
+Instagram store blocked after payment urgently,Online Shopping Scam
+Ecommerce fraud site disappeared today,Online Shopping Scam
+Online seller not responding after payment urgently,Online Shopping Scam
+Fake shopping website took payment yesterday,Online Shopping Scam
+Instagram store blocked after payment immediately,Online Shopping Scam
+Online seller not responding after payment immediately,Online Shopping Scam
+Ordered product not delivered today,Online Shopping Scam
+Online seller not responding after payment suddenly,Online Shopping Scam
+Ordered product not delivered today,Online Shopping Scam
+Online seller not responding after payment suddenly,Online Shopping Scam
+Online seller not responding after payment suddenly,Online Shopping Scam
+Online seller not responding after payment yesterday,Online Shopping Scam
+Ordered product not delivered immediately,Online Shopping Scam
+Ecommerce fraud site disappeared urgently,Online Shopping Scam
+Instagram store blocked after payment today,Online Shopping Scam
+Online seller not responding after payment today,Online Shopping Scam
+Online seller not responding after payment urgently,Online Shopping Scam
+Online seller not responding after payment today,Online Shopping Scam
+Instagram store blocked after payment yesterday,Online Shopping Scam
+Fake shopping website took payment urgently,Online Shopping Scam
+Online seller not responding after payment suddenly,Online Shopping Scam
+Fake shopping website took payment urgently,Online Shopping Scam
+Online seller not responding after payment urgently,Online Shopping Scam
+Online seller not responding after payment suddenly,Online Shopping Scam
+Ordered product not delivered urgently,Online Shopping Scam
+Online seller not responding after payment today,Online Shopping Scam
+Fraud loan agent collected documents today,Loan App Fraud
+Loan app threatening with morphed photos suddenly,Loan App Fraud
+Fake loan approval asking processing fee urgently,Loan App Fraud
+Loan app threatening with morphed photos immediately,Loan App Fraud
+Loan app threatening with morphed photos urgently,Loan App Fraud
+Loan app threatening with morphed photos immediately,Loan App Fraud
+Fraud loan agent collected documents today,Loan App Fraud
+Personal loan scam through mobile app yesterday,Loan App Fraud
+Instant loan app demanding extra charges suddenly,Loan App Fraud
+Fraud loan agent collected documents yesterday,Loan App Fraud
+Instant loan app demanding extra charges immediately,Loan App Fraud
+Loan app threatening with morphed photos immediately,Loan App Fraud
+Loan app threatening with morphed photos today,Loan App Fraud
+Fake loan approval asking processing fee yesterday,Loan App Fraud
+Instant loan app demanding extra charges immediately,Loan App Fraud
+Fake loan approval asking processing fee today,Loan App Fraud
+Personal loan scam through mobile app urgently,Loan App Fraud
+Fraud loan agent collected documents today,Loan App Fraud
+Loan app threatening with morphed photos suddenly,Loan App Fraud
+Fake loan approval asking processing fee suddenly,Loan App Fraud
+Fake loan approval asking processing fee today,Loan App Fraud
+Instant loan app demanding extra charges yesterday,Loan App Fraud
+Fraud loan agent collected documents urgently,Loan App Fraud
+Loan app threatening with morphed photos suddenly,Loan App Fraud
+Instant loan app demanding extra charges today,Loan App Fraud
+Fake loan approval asking processing fee suddenly,Loan App Fraud
+Fake loan approval asking processing fee today,Loan App Fraud
+Fake loan approval asking processing fee yesterday,Loan App Fraud
+Instant loan app demanding extra charges urgently,Loan App Fraud
+Loan app threatening with morphed photos today,Loan App Fraud
+Bank OTP received on new SIM suddenly,Sim Swap Fraud
+Bank OTP received on new SIM suddenly,Sim Swap Fraud
+Bank OTP received on new SIM urgently,Sim Swap Fraud
+Mobile network stopped and account emptied urgently,Sim Swap Fraud
+SIM cloning caused financial loss today,Sim Swap Fraud
+SIM swapped and money transferred yesterday,Sim Swap Fraud
+SIM swapped and money transferred immediately,Sim Swap Fraud
+Duplicate SIM issued without consent immediately,Sim Swap Fraud
+Duplicate SIM issued without consent today,Sim Swap Fraud
+SIM swapped and money transferred today,Sim Swap Fraud
+SIM cloning caused financial loss immediately,Sim Swap Fraud
+Duplicate SIM issued without consent suddenly,Sim Swap Fraud
+SIM swapped and money transferred immediately,Sim Swap Fraud
+Duplicate SIM issued without consent yesterday,Sim Swap Fraud
+Mobile network stopped and account emptied suddenly,Sim Swap Fraud
+Duplicate SIM issued without consent yesterday,Sim Swap Fraud
+Bank OTP received on new SIM yesterday,Sim Swap Fraud
+SIM swapped and money transferred immediately,Sim Swap Fraud
+Mobile network stopped and account emptied suddenly,Sim Swap Fraud
+Duplicate SIM issued without consent yesterday,Sim Swap Fraud
+Mobile network stopped and account emptied suddenly,Sim Swap Fraud
+Duplicate SIM issued without consent immediately,Sim Swap Fraud
+SIM cloning caused financial loss suddenly,Sim Swap Fraud
+Duplicate SIM issued without consent today,Sim Swap Fraud
+Mobile network stopped and account emptied suddenly,Sim Swap Fraud
+SIM swapped and money transferred urgently,Sim Swap Fraud
+Mobile network stopped and account emptied today,Sim Swap Fraud
+SIM cloning caused financial loss today,Sim Swap Fraud
+Duplicate SIM issued without consent yesterday,Sim Swap Fraud
+SIM swapped and money transferred immediately,Sim Swap Fraud
