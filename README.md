@@ -43,4 +43,5 @@ Database:
 2. pip install -r requirements.txt
 3. 2. Run the Flask app
 python app.py3. Open browser and go to
-http://127.0.0.1:10000
+http://127.0.0.1:10000/login
+
