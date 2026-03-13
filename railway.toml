@@ -1,0 +1,20 @@
+# Railway Deployment Configuration
+# This file tells Railway how to deploy your app
+
+[build]
+builder = "python"
+buildCommand = "pip install -r requirements.txt"
+
+[deploy]
+startCommand = "gunicorn app:app"
+healthcheckPath = "/"
+healthcheckTimeout = 300
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+
+[environments]
+# Environment variables will be set in Railway dashboard
+SECRET_KEY = "your_secret_key_here"
+EMAIL_SENDER = "your_email@gmail.com"
+EMAIL_PASSWORD = "your_app_password"
+EMAIL_RECEIVER = "admin@cyberguard.com"
