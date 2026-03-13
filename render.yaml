@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: cyber-commission
+    env: python
+    pythonVersion: 3.11
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    plan: free
+    envVars:
+      - key: SECRET_KEY
+        fromSecret: SECRET_KEY
+      - key: EMAIL_SENDER
+        fromSecret: EMAIL_SENDER
+      - key: EMAIL_PASSWORD
+        fromSecret: EMAIL_PASSWORD
+      - key: EMAIL_RECEIVER
+        fromSecret: EMAIL_RECEIVER
