@@ -5,16 +5,16 @@ from email.mime.multipart import MIMEMultipart
 from functools import wraps
 
 app = Flask(__name__)
-app.secret_key = 'cyberguard_secret_2024'
+app.secret_key = os.environ.get('SECRET_KEY', 'cyberguard_secret_2024')
 
 # ── Load ML model ──────────────────────────────────────────────
 model      = pickle.load(open('model.pkl', 'rb'))
 vectorizer = pickle.load(open('vectorizer.pkl', 'rb'))
 
 # ── Email config ───────────────────────────────────────────────
-EMAIL_SENDER   = "your_email@gmail.com"
-EMAIL_PASSWORD = "your_app_password"
-EMAIL_RECEIVER = "admin@cyberguard.com"
+EMAIL_SENDER   = os.environ.get('EMAIL_SENDER', 'your_email@gmail.com')
+EMAIL_PASSWORD = os.environ.get('EMAIL_PASSWORD', 'your_app_password')
+EMAIL_RECEIVER = os.environ.get('EMAIL_RECEIVER', 'admin@cyberguard.com')
 
 # ── DB init ────────────────────────────────────────────────────
 def init_db():

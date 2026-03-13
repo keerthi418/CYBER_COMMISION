@@ -45,3 +45,47 @@ Database:
 python app.py3. Open browser and go to
 http://127.0.0.1:10000/login
 
+## Deployment
+
+### Heroku Deployment
+
+1. **Prerequisites:**
+   - Heroku CLI installed
+   - Git repository initialized
+
+2. **Environment Setup:**
+   ```bash
+   cp .env.example .env
+   # Edit .env with your actual values
+   ```
+
+3. **Deploy to Heroku:**
+   ```bash
+   heroku create your-app-name
+   heroku config:set SECRET_KEY=your_secret_key
+   heroku config:set EMAIL_SENDER=your_email@gmail.com
+   heroku config:set EMAIL_PASSWORD=your_app_password
+   heroku config:set EMAIL_RECEIVER=admin@cyberguard.com
+   git add .
+   git commit -m "Prepare for deployment"
+   git push heroku main
+   ```
+
+4. **Open your app:**
+   ```bash
+   heroku open
+   ```
+
+### Other Platforms
+
+- **Railway:** Connect your GitHub repo, Railway will auto-detect Python
+- **Render:** Set build command `pip install -r requirements.txt` and start command `gunicorn app:app`
+- **Local Production:** Run `gunicorn --bind 0.0.0.0:8000 app:app`
+
+### Environment Variables Required
+
+- `SECRET_KEY`: Flask secret key for sessions
+- `EMAIL_SENDER`: Email address for notifications
+- `EMAIL_PASSWORD`: App password for email
+- `EMAIL_RECEIVER`: Admin email for notifications
+
